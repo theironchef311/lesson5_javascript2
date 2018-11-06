@@ -46,6 +46,19 @@ function calculateCurrency(){
         //USE THE TABLE PROVIDED FOR VALUES!!!
         var AUD = 1.40885; //exchange rate for Austrialian Dollar
         var AWG = 1.78511;
+        var BSD = 1.000;
+        var XBT = 0.00015;
+        var GBP = .76826;
+        var CAD = 1.30976;
+        var CLP = 683.205;
+        var CNY = 6.93780;
+        var CUP = 25.000;
+        var DKK = 6.49079;
+        var EUR = .87007;
+        var EGP = 17.8726;
+        var HKD = 7.83955;
+        var IRR = 42000;
+        var NGN = 361.969;
 
          
          
@@ -78,7 +91,56 @@ function calculateCurrency(){
         *********************************************************************************************/
          
          //Calculate the exchange rate and set the country prefix using a selection statement
-
+        switch (country)
+        {
+            case "0": exchangeRate = usdAmount * AUD;
+            document.getElementById("currencyExchangeInfo").innerHTML = "Selling" + " " + usdAmount + " " + "USD" + " " + "====>" + " " + exchangeRate + " " + "AUD";
+            break;
+            case "1": exchangeRate = usdAmount * AWG;
+            document.getElementById("currencyExchangeInfo").innerHTML = "Selling" + " " + usdAmount + " " + "USD" + " " + "====>" + " " + exchangeRate + " " + "AWG";
+            break;
+            case "2": exchangeRate = usdAmount * BSD;
+            document.getElementById("currencyExchangeInfo").innerHTML = "Selling" + " " + usdAmount + " " + "USD" + " " + "====>" + " " + exchangeRate + " " + "BSD";
+            break;
+            case "3": exchangeRate = usdAmount * XBT;
+            document.getElementById("currencyExchangeInfo").innerHTML = "Selling" + " " + usdAmount + " " + "USD" + " " + "====>" + " " + exchangeRate + " " + "XBT";
+            break;
+            case "4": exchangeRate = usdAmount * GBP;
+            document.getElementById("currencyExchangeInfo").innerHTML = "Selling" + " " + usdAmount + " " + "USD" + " " + "====>" + " " + exchangeRate + " " + "GBP";
+            break;
+            case "5": exchangeRate = usdAmount * CAD;
+            document.getElementById("currencyExchangeInfo").innerHTML = "Selling" + " " + usdAmount + " " + "USD" + " " + "====>" + " " + exchangeRate + " " + "CAD";
+            break;
+            case "6": exchangeRate = usdAmount * CLP;
+            document.getElementById("currencyExchangeInfo").innerHTML = "Selling" + " " + usdAmount + " " + "USD" + " " + "====>" + " " + exchangeRate + " " + "CLP";
+            break;
+            case "7": exchangeRate = usdAmount * CNY;
+            document.getElementById("currencyExchangeInfo").innerHTML = "Selling" + " " + usdAmount + " " + "USD" + " " + "====>" + " " + exchangeRate + " " + "CNY";
+            break;
+            case "8": exchangeRate = usdAmount * CUP;
+            document.getElementById("currencyExchangeInfo").innerHTML = "Selling" + " " + usdAmount + " " + "USD" + " " + "====>" + " " + exchangeRate + " " + "CUP";
+            break;
+            case "9": exchangeRate = usdAmount * DKK;
+            document.getElementById("currencyExchangeInfo").innerHTML = "Selling" + " " + usdAmount + " " + "USD" + " " + "====>" + " " + exchangeRate + " " + "DKK";
+            break;
+            case "10": exchangeRate = usdAmount * EUR;
+            document.getElementById("currencyExchangeInfo").innerHTML = "Selling" + " " + usdAmount + " " + "USD" + " " + "====>" + " " + exchangeRate + " " + "EUR";
+            break;
+            case "11": exchangeRate = usdAmount * EGP;
+            document.getElementById("currencyExchangeInfo").innerHTML = "Selling" + " " + usdAmount + " " + "USD" + " " + "====>" + " " + exchangeRate + " " + "EGP";
+            break;
+            case "12": exchangeRate = usdAmount * HKD;
+            document.getElementById("currencyExchangeInfo").innerHTML = "Selling" + " " + usdAmount + " " + "USD" + " " + "====>" + " " + exchangeRate + " " + "HKD";
+            break;
+            case "13": exchangeRate = usdAmount * IRR;
+            document.getElementById("currencyExchangeInfo").innerHTML = "Selling" + " " + usdAmount + " " + "USD" + " " + "====>" + " " + exchangeRate + " " + "IRR";
+            break;
+            case "14": exchangeRate = usdAmount * NGN;
+            document.getElementById("currencyExchangeInfo").innerHTML = "Selling" + " " + usdAmount + " " + "USD" + " " + "====>" + " " + exchangeRate + " " + "NGN";
+            break;
+            
+        }
+        
 
 
 
@@ -142,14 +204,14 @@ function clearButton () {
                 
         //This code resets the dropdown menu to "Australian Dollar (AUD)".
        
-        
+        document.getElementById("country").value = "0";
         
         
         //Remove the text from the textfield
-        
+        document.getElementById("usdAmount").value = "";
         
         
         //Remove the currency exchange information from the document where the id is: "currencyExchangeInfo"
-
+        document.getElementById("currencyExchangeInfo").innerHTML = "";
 
 }//end of clearButton function
