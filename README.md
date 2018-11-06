@@ -13,8 +13,7 @@ Web Application Development
 (In this project, we create a currency exchange calculator using javascript. )
 
 ### View Project:
-(Replace this statement with your Github Page URL that was created when you 
- published the project.)
+(https://theironchef311.github.io/lesson5_javascript2/)
 
 ### Lessons Learned in the Assignment:
 1. (Learned the "clearButton" function.)
